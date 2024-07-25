@@ -16,7 +16,14 @@ public class Lecture18{
         System.out.println("\n"+"After Swapping a = " + a);
         System.out.println("After Swapping b = " + b);
     }
+    void swapArrayNos(int[] arr,int i, int j){
+        int temp = 0;
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 
+    //Mera logic
     static int[] reverseOfArray(int[] arr){
         int m = arr.length;
 //        int ans[]= new int[m];
@@ -48,9 +55,19 @@ public class Lecture18{
     }
 
 
+    void ArrayReverse(int [] arr){
+        int i = 0 , j = arr.length-1;
+        while(i < j){
+            swapArrayNos(arr,i,j);
+            i++;
+            j--;
+        }
+    }
+
+
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
-//                   4 5 2 3 1
+        int[] arr = {1,2,3,4,5,6};
+
         int a = 10;
         int b = 5;
 
@@ -64,14 +81,21 @@ public class Lecture18{
 //        System.out.println();
 //        System.out.println();
 
-        int[] reversedArray = new int[arr.length];
-//        for(int i = arr.length - 1; i >= 0 ; i--){
-//            reversedArray[4-i]= arr[i];
+//        int[] reversedArray = new int[arr.length];
+////        for(int i = arr.length - 1; i >= 0 ; i--){
+////            reversedArray[4-i]= arr[i];
+////        }
+//        int i = arr.length-1;
+//        while (i>=0){
+//            reversedArray[4-i] = arr[i--];
 //        }
-        int i = arr.length-1;
-        while (i>=0){
-            reversedArray[4-i] = arr[i--];
-        }
-        printArray(reversedArray);
+//        printArray(reversedArray);
+
+
+//        lc18.reverseOfArray(arr);
+//        printArray(arr);
+
+        lc18.ArrayReverse(arr);
+        printArray(arr);
     }
 }
