@@ -2,7 +2,8 @@ package Arrays4;
 
 import java.util.Scanner;
 
-public class Assignment_1 {
+public class Assignment_1{
+
     static void printArray(int[] a){
         for(int i = 0 ; i < a.length; i++){
             System.out.print(a[i]+ " ");
@@ -40,19 +41,19 @@ public class Assignment_1 {
     }
 
     public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-    System.out.println("Enter size");
-    int n = sc.nextInt();
-    int[] arr = new int[n];
+        System.out.println("Enter size");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
 
-    System.out.println("Enter array elements");
-    for(int i=0; i < n;i++){
-        arr[i] = sc.nextInt();
-    }
+        System.out.println("Enter array elements");
+        for(int i=0; i < n;i++){
+            arr[i] = sc.nextInt();
+        }
 
-    System.out.println("index of its first repeating element (1-based indexing): ");
-    System.out.println(firstRepeatingElement(arr));
+        System.out.println("index of its first repeating element (1-based indexing): ");
+        System.out.println(firstRepeatingElement(arr));
 
     }
 }
