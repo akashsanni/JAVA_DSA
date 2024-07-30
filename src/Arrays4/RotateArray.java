@@ -4,27 +4,27 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class RotateClass{
-    int[] Rotate(int[] arr, int k){
-        int n = arr.length;
-        k = k % n;
-        System.out.println(k);
-        int[] ans = new int[n];
-        int j = 0;
-        //arr -> (n-k) to (n-1)
-        //put (n-k)th position array to
-        //0th position in ans[]
-        for(int i = n-k ; i < n ; i++){
-            ans[j++] = arr[i];
-        }
-        //arr -> [0 to n-k-1]
-        //put 0th position array to
-        //(n-k-1)th position in ans[]
-        for(int i = 0; i < n-k ; i++){
-            ans[j++] = arr[i];
-        }
-
-        return ans;
-    }
+//    int[] Rotate(int[] arr, int k){
+//        int n = arr.length;
+//        k = k % n;
+//        System.out.println(k);
+//        int[] ans = new int[n];
+//        int j = 0;
+//        //arr -> (n-k) to (n-1)
+//        //put (n-k)th position array to
+//        //0th position in ans[]
+//        for(int i = n-k ; i < n ; i++){
+//            ans[j++] = arr[i];
+//        }
+//        //arr -> [0 to n-k-1]
+//        //put 0th position array to
+//        //(n-k-1)th position in ans[]
+//        for(int i = 0; i < n-k ; i++){
+//            ans[j++] = arr[i];
+//        }
+//
+//        return ans;
+//    }
 
 
 
@@ -44,7 +44,7 @@ public class RotateArray {
         arr[j] = temp;
     }
 
-    void ArrayReverse(int[] arr, int i, int j){
+    void ArrayReverse(int[] arr, int i, int j){     // i=>start  j=>end
         while(i < j){
             swapArrayNos(arr,i,j);
             i++;
@@ -69,20 +69,20 @@ public class RotateArray {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter size of the array: ");
-        int m = sc.nextInt();
-        int[] arr = new int[m];
-        System.out.println("Enter Array elements: ");
-        for(int i = 0; i < m; i++){
-            arr[i] = sc.nextInt();
-        }
-        System.out.println("Enter no. of times you want to rotate array: ");
-        int k = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter size of the array: ");
+//        int m = sc.nextInt();
+//        int[] arr = new int[m];
+//        System.out.println("Enter Array elements: ");
+//        for(int i = 0; i < m; i++){
+//            arr[i] = sc.nextInt();
+//        }
+//        System.out.println("Enter no. of times you want to rotate array: ");
+//        int k = sc.nextInt();
 
         //taken these for easy testing with diff use-cases
-//        int arr[] = {1,2,3,4,5,6};
-//        int k = 5;
+        int arr[] = {1,2,3,4,5,6};
+        int k = 5;
 
         System.out.println("Original Array: ");
         printArray(arr);
