@@ -2,12 +2,8 @@ package Arrays4;
 import java.util.*;
         import java.io.*;
 
-public class arra_y {
-}
-// A Naive Java program to find
-// maximum sum rotation
 
-class GFG {
+public class arra_y {
 
     // Returns maximum value of i*arr[i]
     static int maxSum(int arr[], int n)
@@ -51,4 +47,3 @@ class GFG {
 
 }
 
-// This code is contributed by Sahil_Bansall
