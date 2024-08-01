@@ -94,3 +94,5 @@ public class splitArray{
 //Time Complexity: O(N) where N is the size of the array
 //Space Complexity: O(1)
 
+//git changes check
+
